@@ -35,7 +35,7 @@ class WrappedIOSpec extends AnyFlatSpec with Matchers {
       )
   }
 
-  "Action" should "be called only twice" in {
+  "Wrapped Action" should "be called only twice after 4 WrappedIO.run if maxCalls = 2" in {
     val maxCalls = 2
     val counter = for {
       tester <- genTestAction(maxCalls)
